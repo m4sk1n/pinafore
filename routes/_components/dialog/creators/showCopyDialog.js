@@ -7,8 +7,8 @@ export default function showCopyDialog (text) {
     target: createDialogElement(),
     data: {
       id: createDialogId(),
-      label: 'Copy dialog',
-      title: 'Copy link',
+      label: 'Dialog kopiowania',
+      title: 'Skopiuj odnośnik',
       text
     }
   })

@@ -7,7 +7,7 @@ export default function showStatusOptionsDialog (status) {
     target: createDialogElement(),
     data: {
       id: createDialogId(),
-      label: 'Status options dialog',
+      label: 'Dialog opcji wpisu',
       title: '',
       status: status
     }

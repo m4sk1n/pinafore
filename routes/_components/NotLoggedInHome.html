@@ -7,30 +7,30 @@
         </svg>
         <h1>Pinafore</h1>
       </div>
-      <p>Pinafore is a web client for <ExternalLink href="https://joinmastodon.org">Mastodon</ExternalLink>, designed for speed and simplicity.</p>
+      <p>Pinafore jest klientem sieciowym <ExternalLink href="https://joinmastodon.org">Mastodona</ExternalLink> zaprojektowanym dla prostoty i wydajności.</p>
 
-      <p>Read the <ExternalLink href="https://nolanlawson.com/2018/04/09/introducing-pinafore-for-mastodon/">introductory blog post</ExternalLink>, or get started by logging in to an instance:</p>
+      <p>Przeczytaj <ExternalLink href="https://nolanlawson.com/2018/04/09/introducing-pinafore-for-mastodon/">wpis wprowadzający</ExternalLink>, lub rozpocznij logując się na swoją instancję:</p>
 
-      <p style="text-align: right;"><a class="button primary" href="/settings/instances/add">Add instance</a></p>
+      <p style="text-align: right;"><a class="button primary" href="/settings/instances/add">Dodaj instancję</a></p>
     </div>
   </FreeTextLayout>
 </HiddenFromSSR>
 <style>
-  .not-logged-in-home {
+  :global(.not-logged-in-home ){
     margin: 10px;
   }
-  .not-logged-in-home .banner {
+  :global(.not-logged-in-home .banner ){
     display: flex;
     align-items: center;
     margin: 0 0 30px;
   }
-  .not-logged-in-home-svg {
+  :global(.not-logged-in-home-svg ){
     width: 70px;
     height: 70px;
     fill: royalblue;
     display: inline-block;
   }
-  .not-logged-in-home h1 {
+  :global(.not-logged-in-home h1 ){
     color: royalblue;
     display: inline-block;
     font-size: 3em;
@@ -38,7 +38,7 @@
   }
 
   @media (max-width: 767px) {
-    .not-logged-in-home h1 {
+    :global(.not-logged-in-home h1 ){
       font-size: 2.7em;
     }
   }

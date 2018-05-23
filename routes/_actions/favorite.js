@@ -8,7 +8,7 @@ import {
 export async function setFavorited (statusId, favorited) {
   let { online } = store.get()
   if (!online) {
-    toast.say(`You cannot ${favorited ? 'favorite' : 'unfavorite'} while offline.`)
+    toast.say(`Nie możesz ${favorited ? 'dodać do ulubionych' : 'usunąć z ulubionych'}, kiedy jesteś offline.`)
     return
   }
   let { currentInstance, accessToken } = store.get()
@@ -21,7 +21,7 @@ export async function setFavorited (statusId, favorited) {
     await setStatusFavoritedInDatabase(currentInstance, statusId, favorited)
   } catch (e) {
     console.error(e)
-    toast.say(`Failed to ${favorited ? 'favorite' : 'unfavorite'}. ` + (e.message || ''))
+    toast.say(`Nie udało się ${favorited ? 'dodać do ulubionych' : 'usunąć z ulubionych'}. ` + (e.message || ''))
     store.setStatusFavorited(currentInstance, statusId, !favorited) // undo optimistic update
   }
 }

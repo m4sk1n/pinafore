@@ -1,7 +1,7 @@
 const timelines = {
-  home: { name: 'home', label: 'Home' },
-  local: { name: 'local', label: 'Local' },
-  federated: { name: 'federated', label: 'Federated' }
+  home: { name: 'home', label: 'Strona główna' },
+  local: { name: 'local', label: 'Lokalna' },
+  federated: { name: 'federated', label: 'Federacji' }
 }
 
 export { timelines }

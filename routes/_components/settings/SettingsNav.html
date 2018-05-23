@@ -12,25 +12,25 @@
 </nav>
 
 <style>
-  .settings-nav ul {
+  :global(.settings-nav ul ){
     margin: 20px 20px;
     padding: 0;
     list-style: none;
   }
 
-  .settings-nav li {
+  :global(.settings-nav li ){
     margin: 5px 0;
     font-size: 1em;
     display: inline-block;
   }
 
-  .settings-nav li::after {
+  :global(.settings-nav li::after ){
     content: '>';
     margin: 0 15px;
     color: var(--anchor-text);
   }
 
-  .settings-nav li:last-child::after {
+  :global(.settings-nav li:last-child::after ){
     content: '';
     margin-left: 0;
     font-size: 1em;
@@ -41,11 +41,11 @@
   import SettingsNavItem from './SettingsNavItem.html'
 
   const NAV_ITEMS = {
-    'settings': 'Settings',
-    'settings/about': 'About Pinafore',
-    'settings/general': 'General',
-    'settings/instances': 'Instances',
-    'settings/instances/add': 'Add instance'
+    'settings': 'Ustawienia',
+    'settings/about': 'O Pinafore',
+    'settings/general': 'Ogólne',
+    'settings/instances': 'Instancje',
+    'settings/instances/add': 'Dodaj instancję'
   }
 
   export default {

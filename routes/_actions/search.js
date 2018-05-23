@@ -15,7 +15,7 @@ export async function doSearch () {
       })
     }
   } catch (e) {
-    toast.say('Error during search: ' + (e.name || '') + ' ' + (e.message || ''))
+    toast.say('Wystąpił błąd podczas wyszukiwania: ' + (e.name || '') + ' ' + (e.message || ''))
     console.error(e)
   } finally {
     store.set({searchLoading: false})

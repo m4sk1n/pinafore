@@ -10,12 +10,12 @@
   />
 </div>
 <style>
-  .account-profile-follow {
+  :global(.account-profile-follow ){
     grid-area: follow;
     align-self: flex-start;
     display: none;
   }
-  .account-profile-follow.shown {
+  :global(.account-profile-follow.shown ){
     display: block;
   }
 </style>
@@ -70,13 +70,13 @@
       },
       followLabel: ({ blocking, following, followRequested }) => {
         if (blocking) {
-          return 'Unblock'
+          return 'Odblokuj'
         } else if (following) {
-          return 'Unfollow'
+          return 'Przestań śledzić'
         } else if (followRequested) {
-          return 'Unfollow (follow requested)'
+          return 'Cofnij prośbę o śledzenie'
         } else {
-          return 'Follow'
+          return 'Śledź'
         }
       },
       followIcon: ({ blocking, following, followRequested }) => {

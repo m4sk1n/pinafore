@@ -7,7 +7,7 @@ export default function showConfirmationDialog (options) {
     target: createDialogElement(),
     data: Object.assign({
       id: createDialogId(),
-      label: 'Confirmation dialog'
+      label: 'Dialog potwierdzenia'
     }, options)
   })
   dialog.show()

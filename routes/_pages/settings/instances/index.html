@@ -1,9 +1,9 @@
-<SettingsLayout page='settings/instances' label="Instances">
-  <h1>Instances</h1>
+<SettingsLayout page='settings/instances' label="Instancje">
+  <h1>Instancje</h1>
 
   {#if $isUserLoggedIn}
-  <p>Instances you've logged in to:</p>
-  <SettingsList label="Instances">
+  <p>Instancje, na których jesteś zalogowany:</p>
+  <SettingsList label="Instancje">
     {#each $loggedInInstancesAsList as instance}
       <SettingsListItem offsetForIcon={instance.name !== $currentInstance}
                         icon={instance.name === $currentInstance ? '#fa-star' : ''}
@@ -12,10 +12,10 @@
                         ariaLabel="{instance.name} {instance.name === $currentInstance ? '(current instance)' : ''}" />
     {/each}
   </SettingsList>
-  <p><a href="/settings/instances/add">Add another instance</a></p>
+  <p><a href="/settings/instances/add">Dodaj inną instancję</a></p>
   {:else}
-  <p>You're not logged in to any instances.</p>
-  <p><a href="/settings/instances/add">Log in to an instance</a> to start using Pinafore.</p>
+  <p>Nie jesteś zalogowany na żadną instancję.</p>
+  <p><a href="/settings/instances/add">Zaloguj się na swoją instancję</a>, aby zacząć korzystać z Pinafore.</p>
   {/if}
 </SettingsLayout>
 <script>

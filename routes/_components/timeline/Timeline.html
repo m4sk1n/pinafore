@@ -26,7 +26,7 @@
                 on:noNeedToScroll="onNoNeedToScroll()"
     />
   {:catch error}
-    <div>Error: component failed to load! Try reloading. {error}</div>
+    <div>Błąd: nie udało się załadować komponentu! Spróbuj odświeżyć. {error}</div>
   {/await}
 </div>
 <script>
@@ -109,20 +109,20 @@
       },
       label: ({ timeline, $currentInstance, timelineType, timelineValue }) => {
         if (timelines[timeline]) {
-          return `${timelines[timeline].label} timeline for ${$currentInstance}`
+          return `Oś czasu ${timelines[timeline].label} na ${$currentInstance}`
         }
 
         switch (timelineType) {
           case 'tag':
-            return `#${timelineValue} timeline for ${$currentInstance}`
+            return `Oś czasu #${timelineValue} na ${$currentInstance}`
           case 'status':
-            return 'Status context'
+            return 'Zawartość wpisu'
           case 'account':
-            return `Account #${timelineValue} on ${$currentInstance}`
+            return `Konto #${timelineValue} na ${$currentInstance}`
           case 'list':
-            return `List #${timelineValue} on ${$currentInstance}`
+            return `Lista #${timelineValue} na ${$currentInstance}`
           case 'notifications':
-            return `Notifications for ${$currentInstance}`
+            return `Powiadomienia dla ${$currentInstance}`
         }
       },
       timelineType: ({ timeline }) => {

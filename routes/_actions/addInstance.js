@@ -14,7 +14,7 @@ async function redirectToOauth () {
   let { instanceNameInSearch, loggedInInstances } = store.get()
   instanceNameInSearch = instanceNameInSearch.replace(/^https?:\/\//, '').replace(/\/$/, '').replace('/$', '').toLowerCase()
   if (Object.keys(loggedInInstances).includes(instanceNameInSearch)) {
-    store.set({logInToInstanceError: `You've already logged in to ${instanceNameInSearch}`})
+    store.set({logInToInstanceError: `Jesteś już zalogowany na ${instanceNameInSearch}`})
     return
   }
   let registrationPromise = registerApplication(instanceNameInSearch, REDIRECT_URI)
@@ -45,8 +45,8 @@ export async function logInToInstance () {
     console.error(err)
     let error = `${err.message || err.name}. ` +
       (navigator.onLine
-        ? `Is this a valid Mastodon instance? Is a browser extension blocking the request?`
-        : `Are you offline?`)
+        ? `Czy to jest instancja Mastodona? Czy rozszerzenie przeglądarki może blokować to żądanie?`
+        : `Czy jesteś offline?`)
     let { instanceNameInSearch } = store.get()
     store.set({
       logInToInstanceError: error,
@@ -94,7 +94,7 @@ export async function handleOauthCode (code) {
     store.set({logInToInstanceLoading: true})
     await registerNewInstance(code)
   } catch (err) {
-    store.set({logInToInstanceError: `${err.message || err.name}. Failed to connect to instance.`})
+    store.set({logInToInstanceError: `${err.message || err.name}. Nie udało się połączyć z instancją.`})
   } finally {
     store.set({logInToInstanceLoading: false})
   }

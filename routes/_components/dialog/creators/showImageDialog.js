@@ -7,7 +7,7 @@ export default function showImageDialog (poster, src, type, width, height, descr
     target: createDialogElement(),
     data: {
       id: createDialogId(),
-      label: 'Image dialog',
+      label: 'Dialog obrazu',
       poster,
       src,
       type,

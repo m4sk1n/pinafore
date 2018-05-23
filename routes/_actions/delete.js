@@ -6,9 +6,9 @@ export async function doDeleteStatus (statusId) {
   let { currentInstance, accessToken } = store.get()
   try {
     await deleteStatus(currentInstance, accessToken, statusId)
-    toast.say('Status deleted.')
+    toast.say('Usunięto wpis.')
   } catch (e) {
     console.error(e)
-    toast.say('Unable to delete status: ' + (e.message || ''))
+    toast.say('Nie udało się usunąć wpisu: ' + (e.message || ''))
   }
 }

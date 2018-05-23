@@ -60,7 +60,7 @@ export async function logOutOfInstance (instanceName) {
     composeData: composeData
   })
   store.save()
-  toast.say(`Logged out of ${instanceName}`)
+  toast.say(`Wylogowano z ${instanceName}`)
   switchToTheme(instanceThemes[newInstance] || 'default')
   await clearDatabaseForInstance(instanceName)
   goto('/settings/instances')

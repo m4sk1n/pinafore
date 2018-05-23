@@ -1,6 +1,6 @@
 <textarea
   class="compose-box-input"
-  placeholder="What's on your mind?"
+  placeholder="Co Ci chodzi po głowie?"
   ref:textarea
   bind:value=rawText
   on:blur="onBlur()"
@@ -9,7 +9,7 @@
   on:keydown="onKeydown(event)"
 ></textarea>
 <style>
-  .compose-box-input {
+  :global(.compose-box-input ){
     grid-area: input;
     margin: 10px 0 0 5px;
     padding: 10px;

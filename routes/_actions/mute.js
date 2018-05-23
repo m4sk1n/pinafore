@@ -15,14 +15,14 @@ export async function setAccountMuted (accountId, mute, toastOnSuccess) {
     await updateProfileAndRelationship(accountId)
     if (toastOnSuccess) {
       if (mute) {
-        toast.say('Muted account')
+        toast.say('Wyciszono konto')
       } else {
-        toast.say('Unmuted account')
+        toast.say('Cofnięto wyciszenie konta')
       }
     }
     emit('refreshAccountsList')
   } catch (e) {
     console.error(e)
-    toast.say(`Unable to ${mute ? 'mute' : 'unmute'} account: ` + (e.message || ''))
+    toast.say(`Nie udało się ${mute ? 'wyciszyć' : 'cofnąć wyciszenia'} konta: ` + (e.message || ''))
   }
 }

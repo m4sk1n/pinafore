@@ -22,7 +22,7 @@ export async function doMediaUpload (realm, file) {
     scheduleIdleTask(() => store.save())
   } catch (e) {
     console.error(e)
-    toast.say('Failed to upload media: ' + (e.message || ''))
+    toast.say('Nie udało się wysłać zawartości multimedialnej: ' + (e.message || ''))
   } finally {
     store.set({uploadingMedia: false})
   }

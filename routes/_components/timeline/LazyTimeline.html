@@ -4,11 +4,11 @@
   {:then constructor}
     <svelte:component this={constructor} {timeline} />
   {:catch error}
-    <div>Component failed to load. Try refreshing! {error}</div>
+    <div>Nie udało się załadować komponentu. Spróbuj odświeżyć stronę! {error}</div>
   {/await}
 </div>
 <style>
-  .lazy-timeline {
+  :global(.lazy-timeline ){
     width: 100%;
   }
 </style>

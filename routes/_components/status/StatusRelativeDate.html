@@ -3,12 +3,12 @@
    focus-key={focusKey}
 >
   <time datetime={createdAtDate} title={relativeDate}
-        aria-label="{relativeDate} – click to show thread">
+        aria-label="{relativeDate} – naciśnij, aby wyświetlić wątek">
     {relativeDate}
   </time>
 </a>
 <style>
-  .status-relative-date {
+  :global(.status-relative-date ){
     grid-area: relative-date;
     align-self: center;
     margin-left: 5px;
@@ -17,13 +17,13 @@
     text-align: right;
     white-space: nowrap;
   }
-  .status-relative-date, .status-relative-date:hover, .status-relative-date:visited {
+  :global(.status-relative-date, .status-relative-date:hover, .status-relative-date:visited ){
     color: var(--deemphasized-text-color);
   }
 
-  .status-relative-date.status-in-notification,
+  :global(.status-relative-date.status-in-notification,
   .status-relative-date.status-in-notification:hover,
-  .status-relative-date.status-in-notification:visited {
+  .status-relative-date.status-in-notification:visited ){
     color: var(--very-deemphasized-text-color);
   }
 

@@ -5,7 +5,7 @@
   <ExternalLink href={account.url}
                 showIcon="true"
                 normalIconColor="true"
-                ariaLabel="{account.display_name || account.acct} (opens in new window)"
+                ariaLabel="{account.display_name || account.acct} (otwiera w nowym oknie)"
   >
     {account.display_name || account.acct}
   </ExternalLink>
@@ -15,30 +15,30 @@
 </div>
 <div class="account-profile-followed-by">
   {#if relationship && relationship.blocking}
-    <span class="account-profile-followed-by-span">Blocked</span>
+    <span class="account-profile-followed-by-span">Zablokowany</span>
   {:elseif relationship && relationship.followed_by}
-    <span class="account-profile-followed-by-span">Follows you</span>
+    <span class="account-profile-followed-by-span">Śledzi Cię</span>
   {/if}
 </div>
 <style>
-  .account-profile-followed-by {
+  :global(.account-profile-followed-by ){
     grid-area: followed-by;
     align-self: center;
     text-transform: uppercase;
     color: var(--deemphasized-text-color);
     font-size: 0.8em;
   }
-  .account-profile-followed-by-span {
+  :global(.account-profile-followed-by-span ){
     background: rgba(30, 30, 30, 0.2);
     border-radius: 4px;
     padding: 3px 5px;
     white-space: nowrap;
   }
-  .account-profile-avatar {
+  :global(.account-profile-avatar ){
     grid-area: avatar;
   }
 
-  .account-profile-username {
+  :global(.account-profile-username ){
     grid-area: username;
     color: var(--deemphasized-text-color);
     white-space: nowrap;
@@ -47,7 +47,7 @@
     align-self: center;
   }
 
-  .account-profile-name {
+  :global(.account-profile-name ){
     grid-area: name;
     font-size: 1.5em;
     align-self: center;
@@ -66,13 +66,13 @@
   }
 
   @media (max-width: 767px) {
-    .account-profile-name {
+    :global(.account-profile-name ){
       font-size: 1.3em;
     }
-    .account-profile-username {
+    :global(.account-profile-username ){
       font-size: 1.1em;
     }
-    .account-profile-name, .account-profile-username {
+    :global(.account-profile-name, .account-profile-username ){
       align-self: flex-start;
     }
   }

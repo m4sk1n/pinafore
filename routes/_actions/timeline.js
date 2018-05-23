@@ -27,7 +27,7 @@ async function fetchTimelineItems (instanceName, accessToken, timelineName, last
       /* no await */ insertTimelineItemsInDatabase(instanceName, timelineName, items)
     } catch (e) {
       console.error(e)
-      toast.say('Internet request failed. Showing offline content.')
+      toast.say('Połączenie z internetem nie powiodło się. Wyświetlanie zawartości offline.')
       items = await getTimelineFromDatabase(instanceName, timelineName, lastTimelineItemId, FETCH_LIMIT)
       stale = true
     }

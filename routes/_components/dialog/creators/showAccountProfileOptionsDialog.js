@@ -7,7 +7,7 @@ export default function showAccountProfileOptionsDialog (account, relationship, 
     target: createDialogElement(),
     data: {
       id: createDialogId(),
-      label: 'Profile options dialog',
+      label: 'Dialog opcji profilu',
       title: '',
       account: account,
       relationship: relationship,

@@ -26,7 +26,7 @@ export async function postStatus (realm, text, inReplyToId, mediaIds,
   let { currentInstance, accessToken, online } = store.get()
 
   if (!online) {
-    toast.say('You cannot post while offline')
+    toast.say('Nie możesz dodać wpisu, kiedy jesteś offline')
     return
   }
 
@@ -44,7 +44,7 @@ export async function postStatus (realm, text, inReplyToId, mediaIds,
     emit('postedStatus', realm, inReplyToUuid)
   } catch (e) {
     console.error(e)
-    toast.say('Unable to post status: ' + (e.message || ''))
+    toast.say('Nie udało się umieścić wpisu: ' + (e.message || ''))
   } finally {
     store.set({postingStatus: false})
   }

@@ -15,14 +15,14 @@ export async function setAccountBlocked (accountId, block, toastOnSuccess) {
     await updateProfileAndRelationship(accountId)
     if (toastOnSuccess) {
       if (block) {
-        toast.say('Blocked account')
+        toast.say('Zablokowano konto')
       } else {
-        toast.say('Unblocked account')
+        toast.say('Odblokowano konto')
       }
     }
     emit('refreshAccountsList')
   } catch (e) {
     console.error(e)
-    toast.say(`Unable to ${block ? 'block' : 'unblock'} account: ` + (e.message || ''))
+    toast.say(`Nie udało się ${block ? 'zablokować' : 'odblokować'} konta: ` + (e.message || ''))
   }
 }

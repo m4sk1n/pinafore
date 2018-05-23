@@ -5,7 +5,7 @@ function onUpdateFound (registration) {
 
   newWorker.addEventListener('statechange', async () => {
     if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-      toast.say('App update available. Reload to update.')
+      toast.say('Aktualizacja aplikacji jest dostępna. Odśwież, aby zaktualizować.')
     }
   })
 }

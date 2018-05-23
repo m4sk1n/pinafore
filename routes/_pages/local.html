@@ -1,15 +1,15 @@
 {#if $isUserLoggedIn}
   <TimelinePage timeline="local">
     {#if $pinnedPage !== '/local'}
-      <DynamicPageBanner title="Local Timeline" icon="#fa-users"/>
+      <DynamicPageBanner title="Lokalna oś czasu" icon="#fa-users"/>
     {/if}
   </TimelinePage>
 {:else}
   <HiddenFromSSR>
     <FreeTextLayout>
-      <h1>Local</h1>
+      <h1>Lokalna oś czasu</h1>
 
-      <p>Your local timeline will appear here when logged in.</p>
+      <p>Twoja lokalna oś czasu pojawi się po zalogowaniu.</p>
     </FreeTextLayout>
   </HiddenFromSSR>
 {/if}

@@ -20,16 +20,16 @@ export async function setAccountFollowed (accountId, follow, toastOnSuccess) {
     if (toastOnSuccess) {
       if (follow) {
         if (account.locked && relationship.requested) {
-          toast.say('Requested to follow account')
+          toast.say('Wysłano prośbę o śledzenie')
         } else {
-          toast.say('Followed account')
+          toast.say('Zacząłeś śledzić konto')
         }
       } else {
-        toast.say('Unfollowed account')
+        toast.say('Przestałeś śledzić konto')
       }
     }
   } catch (e) {
     console.error(e)
-    toast.say(`Unable to ${follow ? 'follow' : 'unfollow'} account: ` + (e.message || ''))
+    toast.say(`Nie udało się ${follow ? 'zacząć śledzić' : 'przestać śledzić'} konta: ` + (e.message || ''))
   }
 }

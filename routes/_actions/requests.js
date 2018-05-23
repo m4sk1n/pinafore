@@ -16,14 +16,14 @@ export async function setFollowRequestApprovedOrRejected (accountId, approved, t
     }
     if (toastOnSuccess) {
       if (approved) {
-        toast.say('Approved follow request')
+        toast.say('Zaakceptowano prośbę o śledzenie')
       } else {
-        toast.say('Rejected follow request')
+        toast.say('Odrzucono prośbę o śledzenie')
       }
     }
     emit('refreshAccountsList')
   } catch (e) {
     console.error(e)
-    toast.say(`Unable to ${approved ? 'approve' : 'reject'} account: ` + (e.message || ''))
+    toast.say(`Nie udało się ${approved ? 'przyjąć' : 'odrzucić'} konta: ` + (e.message || ''))
   }
 }

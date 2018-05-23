@@ -3,7 +3,7 @@ const TIMEOUT = process.browser ? 60000 : 120000
 function fetchWithTimeout (url, options) {
   return new Promise((resolve, reject) => {
     fetch(url, options).then(resolve, reject)
-    setTimeout(() => reject(new Error(`Timed out after ${TIMEOUT / 1000} seconds`)), TIMEOUT)
+    setTimeout(() => reject(new Error(`Upłynął limit czasu po ${TIMEOUT / 1000} sekundach`)), TIMEOUT)
   })
 }
 

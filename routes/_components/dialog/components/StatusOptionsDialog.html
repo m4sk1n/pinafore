@@ -44,30 +44,30 @@ export default {
         return ''
       }
       return (following || followRequested)
-        ? `Unfollow @${acct}`
-        : `Follow @${acct}`
+        ? `Przestań śledzić @${acct}`
+        : `Śledź @${acct}`
     },
     followIcon: ({following, followRequested}) => (
       following ? '#fa-user-times' : followRequested ? '#fa-hourglass' : '#fa-user-plus'
     ),
     blockLabel: ({blocking, acct}) => (
-      blocking ? `Unblock @${acct}` : `Block @${acct}`
+      blocking ? `Odblokuj @${acct}` : `Zablokuj @${acct}`
     ),
     blockIcon: ({blocking}) => blocking ? '#fa-unlock' : '#fa-ban',
     muteLabel: ({muting, acct}) => (
-      muting ? `Unmute @${acct}` : `Mute @${acct}`
+      muting ? `Cofnij wyciszenie @${acct}` : `Wycisz @${acct}`
     ),
     muteIcon: ({muting}) => muting ? '#fa-volume-up' : '#fa-volume-off',
     isUser: ({accountId, verifyCredentialsId}) => accountId === verifyCredentialsId,
     //
     // end copypasta (StatusOptionsDialog.html / AccountProfileOptionsDialog.html)
     //
-    pinLabel: ({pinned, isUser}) => isUser ? (pinned ? 'Unpin from profile' : 'Pin to profile') : '',
+    pinLabel: ({pinned, isUser}) => isUser ? (pinned ? 'Odepnij z profilu' : 'Przypnij do profilu') : '',
     visibility: ({status}) => status.visibility,
     mentions: ({status}) => status.mentions || [],
     mentionsUser: ({mentions, verifyCredentialsId}) => !!mentions.find(_ => _.id === verifyCredentialsId),
     mutingConversation: ({status}) => !!status.muted,
-    muteConversationLabel: ({mutingConversation}) => mutingConversation ? `Unmute conversation` : `Mute conversation`,
+    muteConversationLabel: ({mutingConversation}) => mutingConversation ? `Cofnij wyciszenie` : `Wycisz konwersację`,
     muteConversationIcon: ({mutingConversation}) => mutingConversation ? '#fa-volume-up' : '#fa-volume-off',
     items: ({
       blockLabel, blocking, blockIcon, muteLabel, muteIcon, followLabel, followIcon,
@@ -76,7 +76,7 @@ export default {
     }) => ([
       isUser && {
         key: 'delete',
-        label: 'Delete',
+        label: 'Usuń',
         icon: '#fa-trash'
       },
       visibility !== 'private' && visibility !== 'direct' && isUser && {
@@ -106,7 +106,7 @@ export default {
       },
       {
         key: 'copy',
-        label: 'Copy link to toot',
+        label: 'Skopiuj odnośnik do wpisu',
         icon: '#fa-copy'
       }
     ].filter(Boolean))

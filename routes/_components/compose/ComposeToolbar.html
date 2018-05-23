@@ -1,24 +1,24 @@
 <div class="compose-box-toolbar">
   <div class="compose-box-toolbar-items">
     <IconButton
-      label="Insert emoji"
+      label="Dodaj emoji"
       href="#fa-smile"
       on:click="onEmojiClick()"
     />
     <IconButton
       svgClassName={$uploadingMedia ? 'spin' : ''}
-      label="Add media"
+      label="Dodaj zawartość multimedialną"
       href={$uploadingMedia ? '#fa-spinner' : '#fa-camera'}
       on:click="onMediaClick()"
       disabled={$uploadingMedia || (media.length === 4)}
     />
     <IconButton
-      label="Adjust privacy (currently {postPrivacy.label})"
+      label="Dostosuj prywatność (currently {postPrivacy.label})"
       href={postPrivacy.icon}
       on:click="onPostPrivacyClick()"
     />
     <IconButton
-      label={contentWarningShown ? 'Remove content warning' : 'Add content warning'}
+      label={contentWarningShown ? 'Usuń ostrzeżenie o zawartości' : 'Dodaj ostrzeżenie o zawartości'}
       href="#fa-exclamation-triangle"
       on:click="onContentWarningClick()"
       pressable="true"
@@ -33,12 +33,12 @@
   <ComposeAutosuggest {realm} {text} />
 </div>
 <style>
-  .compose-box-toolbar {
+  :global(.compose-box-toolbar ){
     grid-area: toolbar;
     position: relative;
     align-self: center;
   }
-  .compose-box-toolbar-items {
+  :global(.compose-box-toolbar-items ){
     display: flex;
     align-items: center;
   }

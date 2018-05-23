@@ -14,15 +14,15 @@ export async function setStatusPinnedOrUnpinned (statusId, pinned, toastOnSucces
     }
     if (toastOnSuccess) {
       if (pinned) {
-        toast.say('Pinned status')
+        toast.say('Przypięto wpis')
       } else {
-        toast.say('Unpinned status')
+        toast.say('Cofnięto przypięcie wpisu')
       }
     }
     await setStatusPinnedInDatabase(currentInstance, statusId, pinned)
     emit('updatePinnedStatuses')
   } catch (e) {
     console.error(e)
-    toast.say(`Unable to ${pinned ? 'pin' : 'unpin'} status: ` + (e.message || ''))
+    toast.say(`Nie udało się${pinned ? 'przypiąć' : 'cofnąć przypięcia'} wpisu: ` + (e.message || ''))
   }
 }

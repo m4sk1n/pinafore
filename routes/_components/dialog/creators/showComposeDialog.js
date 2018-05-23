@@ -7,7 +7,7 @@ export default function showComposeDialog () {
     target: createDialogElement(),
     data: {
       id: createDialogId(),
-      label: 'Compose dialog'
+      label: 'Dialog tworzenia'
     }
   })
   dialog.show()

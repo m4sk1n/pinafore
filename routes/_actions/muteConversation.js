@@ -14,13 +14,13 @@ export async function setConversationMuted (statusId, mute, toastOnSuccess) {
     await setStatusMutedInDatabase(currentInstance, statusId, mute)
     if (toastOnSuccess) {
       if (mute) {
-        toast.say('Muted conversation')
+        toast.say('Wyciszono konwersację')
       } else {
-        toast.say('Unmuted conversation')
+        toast.say('Cofnięto wyciszenie konwersacji')
       }
     }
   } catch (e) {
     console.error(e)
-    toast.say(`Unable to ${mute ? 'mute' : 'unmute'} conversation: ` + (e.message || ''))
+    toast.say(`Nie udało się ${mute ? 'wyciszyć' : 'cofnąć wyciszenia'} konwersacji: ` + (e.message || ''))
   }
 }

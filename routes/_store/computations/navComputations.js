@@ -22,14 +22,14 @@ export function navComputations (store) {
           name: 'federated',
           href: '/federated',
           svg: '#fa-globe',
-          label: 'Federated'
+          label: 'Oś czasu federacji'
         }
       } else if (pinnedPage === '/favorites') {
         pinnedPageObject = {
           name: 'favorites',
           href: '/favorites',
           svg: '#fa-star',
-          label: 'Favorites'
+          label: 'Ulubione'
         }
       } else if (pinnedPage.startsWith('/lists/')) {
         pinnedPageObject = {
@@ -43,7 +43,7 @@ export function navComputations (store) {
           name: 'local',
           href: '/local',
           svg: '#fa-users',
-          label: 'Local'
+          label: 'Lokalna oś czasu'
         }
       }
 
@@ -52,32 +52,32 @@ export function navComputations (store) {
           name: 'home',
           href: '/',
           svg: '#pinafore-logo',
-          label: 'Home'
+          label: 'Strona główna'
         },
         {
           name: 'notifications',
           href: '/notifications',
           svg: '#fa-bell',
-          label: 'Notifications'
+          label: 'Powiadomienia'
         },
         pinnedPageObject,
         {
           name: 'community',
           href: '/community',
           svg: '#fa-comments',
-          label: 'Community'
+          label: 'Społeczność'
         },
         {
           name: 'search',
           href: '/search',
           svg: '#fa-search',
-          label: 'Search'
+          label: 'Wyszukiwanie'
         },
         {
           name: 'settings',
           href: '/settings',
           svg: '#fa-gear',
-          label: 'Settings'
+          label: 'Ustawienia'
         }
       ]
     }

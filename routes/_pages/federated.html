@@ -1,15 +1,15 @@
 {#if $isUserLoggedIn}
   <TimelinePage timeline="federated">
     {#if $pinnedPage !== '/federated'}
-      <DynamicPageBanner title="Federated Timeline" icon="#fa-globe"/>
+      <DynamicPageBanner title="Oś czasu federacji" icon="#fa-globe"/>
     {/if}
   </TimelinePage>
 {:else}
   <HiddenFromSSR>
     <FreeTextLayout>
-      <h1>Federated</h1>
+      <h1>Oś czasu federacji</h1>
 
-      <p>Your federated timeline will appear here when logged in.</p>
+      <p>Oś czasu federacji pojawi się po zalogowaniu.</p>
     </FreeTextLayout>
   </HiddenFromSSR>
 {/if}

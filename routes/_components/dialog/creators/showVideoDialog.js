@@ -7,7 +7,7 @@ export default function showVideoDialog (poster, src, width, height, description
     target: createDialogElement(),
     data: {
       id: createDialogId(),
-      label: 'Video dialog',
+      label: 'Dialog filmu',
       poster,
       src,
       width,

@@ -35,7 +35,7 @@
   {/if}
 </SettingsLayout>
 <style>
-  .acct-current-user {
+  :global(.acct-current-user ){
     background: var(--form-bg);
     border: 1px solid var(--main-border);
     border-radius: 4px;
@@ -56,10 +56,10 @@
   :global(.acct-handle) {
     grid-area: handle;
   }
-  .acct-display-name {
+  :global(.acct-display-name ){
     grid-area: display-name;
   }
-  .theme-chooser {
+  :global(.theme-chooser ){
     background: var(--form-bg);
     border: 1px solid var(--main-border);
     border-radius: 4px;
@@ -67,24 +67,24 @@
     padding: 20px;
     line-height: 2em;
   }
-  .theme-group {
+  :global(.theme-group ){
     display: flex;
     align-items: center;
   }
-  .theme-chooser label {
+  :global(.theme-chooser label ){
     margin: 2px 10px 0;
   }
-  .instance-actions {
+  :global(.instance-actions ){
     width: 100%;
     display: flex;
     justify-content: right;
     margin: 20px 0;
   }
-  .instance-actions button {
+  :global(.instance-actions button ){
     margin: 0 5px;
     flex-basis: 100%;
   }
-  .instance-name-h1 {
+  :global(.instance-name-h1 ){
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

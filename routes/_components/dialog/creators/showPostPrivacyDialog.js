@@ -7,7 +7,7 @@ export default function showPostPrivacyDialog (realm) {
     target: createDialogElement(),
     data: {
       id: createDialogId(),
-      label: 'Post privacy dialog',
+      label: 'Dialog prywatności wpisu',
       title: 'Post privacy',
       realm: realm
     }

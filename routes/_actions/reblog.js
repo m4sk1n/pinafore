@@ -6,7 +6,7 @@ import { setStatusReblogged as setStatusRebloggedInDatabase } from '../_database
 export async function setReblogged (statusId, reblogged) {
   let online = store.get()
   if (!online) {
-    toast.say(`You cannot ${reblogged ? 'boost' : 'unboost'} while offline.`)
+    toast.say(`Nie możesz ${reblogged ? 'podbić' : 'cofnąć podbicia'}, kiedy jesteś offline.`)
     return
   }
   let { currentInstance, accessToken } = store.get()
@@ -19,7 +19,7 @@ export async function setReblogged (statusId, reblogged) {
     await setStatusRebloggedInDatabase(currentInstance, statusId, reblogged)
   } catch (e) {
     console.error(e)
-    toast.say(`Failed to ${reblogged ? 'boost' : 'unboost'}. ` + (e.message || ''))
+    toast.say(`Nie udało się ${reblogged ? 'podbić' : 'cofnąć podbicia'}. ` + (e.message || ''))
     store.setStatusReblogged(currentInstance, statusId, !reblogged) // undo optimistic update
   }
 }
